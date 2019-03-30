@@ -3,7 +3,26 @@
 {% block content %}
 <div class="container">
     <div class="row justify-content-center mt-3">
-        <h1>COMPLEX ROOTS</h1>
+        <h1 class="text-center">COMPLEX ROOTS</h1>
+        <p>Let z belonging to C, z = r(cos f + i sin f). There are n many n-th roots of z 
+        which are given by the formula:
+        (formula) </p>
+        <form method="post" class="form-inline my-3 justify-content-center">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.real }}
+            {{ form.real.errors }}
+
+            {{ form.imag }}
+            {{ form.imag.errors }} 
+
+            {{ form.root_degree }}
+            {{ form.root_degree.errors }}
+        </div>
+        <div class="form-group">
+        <button type=submit class="btn btn-primary">Plot roots</button>
+        </div>
+        </form>
     </div>
 </div>
 {% endblock %}
