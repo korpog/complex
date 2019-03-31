@@ -1,3 +1,15 @@
 body {
     background: steelblue;
 }
+
+h1 {
+    font-family: 'Bree Serif', serif;
+}
+
+p {
+    font-family: 'Oswald', sans-serif;
+}
+
+.main {
+    border-top: 1px solid gold;
+}

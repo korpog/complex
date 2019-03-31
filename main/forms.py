@@ -3,7 +3,7 @@ from django import forms
 class ComplexForm(forms.Form):
     real = forms.FloatField(label="Real")
     imag = forms.FloatField(label="Imaginary")
-    root_degree = forms.IntegerField(min_value=1, label="")
+    root_degree = forms.IntegerField(min_value=1, label="Root degree")
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
