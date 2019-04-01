@@ -2,7 +2,7 @@ import math
 import cmath
 
 def get_complex_roots(cmplx_num, root_degree):
-    ''' returns a list of roots of a complex number
+    ''' returns the list of roots of a complex number
         Example:
         roots = get_complex_roots(-2j, 2)
         [(1.0000000000000002-1j), (-1+1.0000000000000002j)]

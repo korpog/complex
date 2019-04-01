@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        {% for root in roots %}
+        <p>{{root}}</p>
+        {% endfor %}
+    </div>
+{% endblock  %}
