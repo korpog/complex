@@ -2,8 +2,14 @@
 
 {% block content %}
     <div class="container">
-        {% for root in roots %}
+        {% for root in roots_ %}
         <p>{{root}}</p>
         {% endfor %}
+        {{ div | safe }}
     </div>
+{% endblock  %}
+
+{% block javascript %}
+    {{ block.super }}
+    {{ script | safe }}
 {% endblock  %}

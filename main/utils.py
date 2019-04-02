@@ -1,5 +1,7 @@
 import math
 import cmath
+from bokeh.plotting import figure
+from bokeh.embed import components
 
 def get_complex_roots(cmplx_num, root_degree):
     ''' returns the list of roots of a complex number
@@ -15,3 +17,9 @@ def get_complex_roots(cmplx_num, root_degree):
         root = cmath.rect(modulus_root, (phase + 2 * i * math.pi)/root_degree)
         roots_list.append(root)
     return roots_list
+
+def get_plot_components():
+    plot = figure()
+    plot.circle([1,2], [3,4])
+    comp = components(plot)
+    return comp
