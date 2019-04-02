@@ -3,13 +3,10 @@ body {
 }
 
 h1 {
+    border-bottom: 1px solid gold;
     font-family: 'Bree Serif', serif;
 }
 
 p {
     font-family: 'Oswald', sans-serif;
-}
-
-.main {
-    border-top: 1px solid gold;
 }

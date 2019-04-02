@@ -2,10 +2,16 @@
 
 {% block content %}
     <div class="container">
-        {% for root in roots_ %}
-        <p>{{root}}</p>
-        {% endfor %}
-        {{ div | safe }}
+        <div class="row">
+            <div class="col"></div>
+            <div class="col ">
+            {{ div | safe }}
+                <div class="text-center">
+                    <a class="btn btn-primary mt-2" href="{% url 'index' %}">Go back</a>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
     </div>
 {% endblock  %}
 
