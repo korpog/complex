@@ -5,10 +5,11 @@ from bokeh.embed import components
 
 
 def get_complex_roots(cmplx_num, root_degree):
-    ''' returns the list of roots of a complex number
+    ''' returns the list of roots of a complex number (rounded to two decimal places)
         Example:
-        roots = get_complex_roots(-2j, 2)
-        [(1.0000000000000002-1j), (-1+1.0000000000000002j)]
+        cmplx_num = complex(1, 0)
+        roots = get_complex_roots(cmplx_num, 2)
+        [(1+0j), (-1+0j)]
     '''
     roots_list = []
     modulus = math.sqrt(cmplx_num.real ** 2 + cmplx_num.imag ** 2)
@@ -16,7 +17,8 @@ def get_complex_roots(cmplx_num, root_degree):
     phase = cmath.phase(cmplx_num)
     for i in range(root_degree):
         root = cmath.rect(modulus_root, (phase + 2 * i * math.pi)/root_degree)
-        roots_list.append(root)
+        root_rounded = complex(round(root.real, 2), round(root.imag, 2))
+        roots_list.append(root_rounded)
     return roots_list
 
 
